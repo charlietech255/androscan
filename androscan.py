@@ -1,9 +1,8 @@
-
-"""
-androscan ni tool iliyo undwa na charlie tech kama project yake ya kwanza kwenye safari yake ya kujifunza kutengeneza tools za termux
-tool hii itakusaidia ku scan android device yako na kuona full details za kifaa chako ikiwemo malware app zinazo run at background
-tool hii imeundwa kwa pure python with simple libralies ambazo haziitaj larger space wakati wa installation
-"""
+#!/usr/bin/env python3
+# androscan – tool iliyo undwa na charlie tech kama project yake ya kwanza
+# kwenye safari yake ya kujifunza kutengeneza tools za termux.
+# Tool hii itakusaidia ku scan android device yako na kuona full details
+# za kifaa chako ikiwemo malware app zinazo run at background.
 
 import os
 import subprocess
