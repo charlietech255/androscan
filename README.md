@@ -1,36 +1,36 @@
 
-# 📱 Androscan – Complete Android System Analyzer for Termux
+# 📱 Androscan – Complete Android System Analyzer for Termux made by Charlie Syllas
 
 [![Termux](https://img.shields.io/badge/Termux-Android-blue.svg)](https://termux.com/)
 [![Python](https://img.shields.io/badge/Python-3.11+-green.svg)](https://python.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Androscan** is a powerful, all‑in‑one system information tool for Android devices, running entirely inside **Termux** – **no root required**. It displays **RAM, CPU, storage, system health, battery stats, installed apps, background processes, network details, sensors**, and much more in a beautiful, color‑coded terminal output.
+**Androscan** is a powerful, all‑in‑one system information tool for Android devices, running entirely inside **Termux** – **no root required**. It displays **RAM, CPU, storage, system health, battery stats, installed apps, background processes, network details, sensors**, and much hii ni kama my first project on my journey of learning termux tool making with my favourite language **PYTHON** with the helper of **Bash cripting**
 
 ![Demo Screenshot](https://via.placeholder.com/800x450?text=Androscan+Terminal+Output+Example)
 
 ---
 
-## ✨ Features
+##  Features
 
 | Category | Details |
 |----------|---------|
-| 📱 **Device** | Manufacturer, model, Android version, SDK level, kernel version |
-| 🧠 **RAM** | Total, used, free, available, usage percentage (from `/proc/meminfo`) |
-| ⚙️ **CPU** | Model, core count, max/current frequency, architecture, load average |
-| 💾 **Storage** | Internal `/data` and external `/sdcard` usage (used / total) |
-| 🏥 **System Health** | Uptime, CPU temperature (°C/°F), thermal throttling status |
-| 🔋 **Battery** | Level %, temperature, voltage, health, technology, charging status |
-| 🌐 **Network** | Wi‑Fi SSID, IP address (wlan0), data RX/TX since boot |
-| 📦 **Installed Apps** | Number of user apps, system apps, top 5 user package names |
-| 🔄 **Background Processes** | Top 8 processes by CPU% and MEM% (from `top`) |
-| 📡 **Sensors** | List of available hardware sensors (accelerometer, gyroscope, etc.) |
+|  **Device** | Manufacturer, model, Android version, SDK level, kernel version |
+|  **RAM** | Total, used, free, available, usage percentage (from `/proc/meminfo`) |
+|  **CPU** | Model, core count, max/current frequency, architecture, load average |
+|  **Storage** | Internal `/data` and external `/sdcard` usage (used / total) |
+|  **System Health** | Uptime, CPU temperature (°C/°F), thermal throttling status |
+|  **Battery** | Level %, temperature, voltage, health, technology, charging status |
+|  **Network** | Wi‑Fi SSID, IP address (wlan0), data RX/TX since boot |
+|  **Installed Apps** | Number of user apps, system apps, top 5 user package names |
+|  **Background Processes** | Top 8 processes by CPU% and MEM% (from `top`) |
+|  **Sensors** | List of available hardware sensors (accelerometer, gyroscope, etc.) |
 
 > **All data is read directly from Android’s kernel interfaces (`/proc`, `/sys`, `getprop`) – no fake or mock values.**
 
 ---
 
-## 🚀 Installation from Scratch (First Time in Termux)
+##  Installation from Scratch (First Time in Termux) kama hujawahi kabsa install termux kwenye simu yako
 
 Follow these steps **exactly** to get Androscan running on your device.
 
@@ -73,7 +73,7 @@ androscan
 
 ---
 
-## 🔥 Quick One‑Liner
+##  Quick One‑Liner
 If you already have Git and Python installed:
 ```bash
 git clone https://github.com/charlietech255/androscan && cd androscan && bash install.sh && androscan
@@ -81,7 +81,7 @@ git clone https://github.com/charlietech255/androscan && cd androscan && bash in
 
 ---
 
-## 🔧 Optional Features (For Even More Data)
+##  Optional Features (For Even More Data)
 
 ### Install Termux:API for sensor access
 ```bash
@@ -98,26 +98,26 @@ bash install.sh
 
 ---
 
-## 📊 Example Output
+##  Example Output
 
 ```text
 ═══════════════════════════════════════════════════════════
                 ANDROSCAN: SYSTEM ANALYZER
 ═══════════════════════════════════════════════════════════
 
-📱 DEVICE INFORMATION
+ DEVICE INFORMATION
    Manufacturer   : OnePlus
    Model          : ONEPLUS A6013
    Android Version: 11 (SDK 30)
    Kernel         : 4.9.227-perf+
 
-📊 RAM USAGE
+ RAM USAGE
    Total   : 7.2 GiB
    Used    : 4.1 GiB (57%)
    Free    : 3.1 GiB
    Available: 5.0 GiB
 
-⚙️ CPU INFORMATION
+ CPU INFORMATION
    Model        : sdm845
    Cores        : 8
    Max Frequency: 2803 MHz
@@ -125,34 +125,34 @@ bash install.sh
    Architecture : ARM64 (AArch64)
    Load Average : 1.52 (1m), 1.28 (5m), 1.05 (15m)
 
-💾 STORAGE
+ STORAGE
    /data   : 52G used / 108G total (48% used)
    /sdcard : 18G used / 112G total (16% used)
 
-🏥 SYSTEM HEALTH
+ SYSTEM HEALTH
    Uptime       : 2d 14h 23m
    CPU Temp     : 45.2°C (113.4°F)
    Thermal Throttle: No
 
-🔋 BATTERY HEALTH
+ BATTERY HEALTH
    Level      : 78%
    Temperature: 36.5°C (97.7°F)
    Status     : Discharging
 
-🌐 NETWORK
+ NETWORK
    Wi-Fi SSID : MyHomeNetwork
    IP Address : 192.168.1.105
    Data RX/TX : 124.5 MiB / 45.2 MiB (since boot)
 
-📦 INSTALLED APPS
+ INSTALLED APPS
    User apps   : 127
    System apps : 214
 
-🔄 BACKGROUND PROCESSES (top CPU/RAM)
+ BACKGROUND PROCESSES (top CPU/RAM)
    12.5% CPU | 8.2% MEM → com.android.chrome
    8.1% CPU  | 4.5% MEM → com.whatsapp
 
-📡 SENSORS DETECTED
+ SENSORS DETECTED
    - accelerometer
    - gyroscope
    - proximity
@@ -163,7 +163,7 @@ Tip: Install Termux:API (pkg install termux-api) for more sensor data.
 
 ---
 
-## ❓ Troubleshooting
+##  Troubleshooting
 
 - **`command not found: androscan`**: Ensure the installer ran without errors. You might need to restart Termux.
 - **Permission Denied**: Run `chmod +x $PREFIX/bin/androscan`.
@@ -172,7 +172,7 @@ Tip: Install Termux:API (pkg install termux-api) for more sensor data.
 
 ---
 
-## 🗑️ Uninstall
+##  Uninstall
 
 To remove Androscan from your system:
 ```bash
@@ -182,7 +182,7 @@ rm -rf ~/androscan
 
 ---
 
-## 📝 Contribution & Support
+##  Contribution & Support
 
 1. Fork the repo.
 2. Create your feature branch.
