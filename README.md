@@ -76,7 +76,7 @@ androscan
 ## 🔥 Quick One‑Liner
 If you already have Git and Python installed:
 ```bash
-git clone [https://github.com/charlietech255/androscan](https://github.com/charlietech255/androscan) && cd androscan && bash install.sh && androscan
+git clone https://github.com/charlietech255/androscan && cd androscan && bash install.sh && androscan
 ```
 
 ---
