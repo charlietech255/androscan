@@ -7,7 +7,7 @@
 
 **Androscan** is a powerful, all‑in‑one system information tool for Android devices, running entirely inside **Termux** – **no root required**. It displays **RAM, CPU, storage, system health, battery stats, installed apps, background processes, network details, sensors**, and much hii ni kama my first project on my journey of learning termux tool making with my favourite language **PYTHON** with the helper of **Bash cripting**
 
-![Demo Screenshot](https://via.placeholder.com/800x450?text=Androscan+Terminal+Output+Example)
+![Demo Screenshot](https://github.com/charlietech255/androscan/blob/main/screenshot.jpg)
 
 ---
 
