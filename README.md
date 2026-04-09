@@ -55,7 +55,9 @@ termux-setup-storage
 
 ### 5. Clone the Androscan repository
 ```bash
-git clone [https://github.com/charlietech255/androscan](https://github.com/charlietech255/androscan)
+git clone https://github.com/charlietech255/androscan
+```
+```bash
 cd androscan
 ```
 
