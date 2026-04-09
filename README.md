@@ -1,3 +1,4 @@
+
 # 📱 Androscan – Complete Android System Analyzer for Termux
 
 [![Termux](https://img.shields.io/badge/Termux-Android-blue.svg)](https://termux.com/)
@@ -6,7 +7,7 @@
 
 **Androscan** is a powerful, all‑in‑one system information tool for Android devices, running entirely inside **Termux** – **no root required**. It displays **RAM, CPU, storage, system health, battery stats, installed apps, background processes, network details, sensors**, and much more in a beautiful, color‑coded terminal output.
 
-![Demo Screenshot](https://via.placeholder.com/800x450?text=Colorful+Terminal+Output+Example)
+![Demo Screenshot](https://via.placeholder.com/800x450?text=Androscan+Terminal+Output+Example)
 
 ---
 
@@ -31,62 +32,49 @@
 
 ## 🚀 Installation from Scratch (First Time in Termux)
 
-Follow these steps **exactly** – even if you’ve never used Termux before.
+Follow these steps **exactly** to get Androscan running on your device.
 
 ### 1. Install Termux
+- **Recommended:** Download Termux from [F‑Droid](https://f-droid.org/en/packages/com.termux/) for the most up-to-date version.
 
-- **Recommended:** Download Termux from [F‑Droid](https://f-droid.org/repo/com.termux_118.apk) (more stable and up‑to‑date than the Play Store version).
-- Install the APK on your Android device.
-
-### 2. Open Termux and update packages
-
+### 2. Update packages
 ```bash
 pkg update && pkg upgrade -y
 ```
 
 ### 3. Install required tools
-
 ```bash
 pkg install git python -y
 ```
 
-### 4. Grant storage permission (to access `/sdcard`)
-
+### 4. Grant storage permission
 ```bash
 termux-setup-storage
 ```
+*Tap **Allow** on the Android popup to enable storage analysis.*
 
-A popup will ask for storage permission – tap **Allow**.
-
-### 5. Clone the DroidInfo repository
-
+### 5. Clone the Androscan repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/droidinfo-advanced
-cd droidinfo-advanced
+git clone [https://github.com/charlietech255/androscan](https://github.com/charlietech255/androscan)
+cd androscan
 ```
 
-> **Important:** Replace `YOUR_USERNAME/droidinfo-advanced` with your actual GitHub username and repository name.
-
 ### 6. Run the installer
-
 ```bash
 bash install.sh
 ```
 
-### 7. Launch DroidInfo
-
+### 7. Launch Androscan
 ```bash
-droidinfo
+androscan
 ```
-
-That’s it! You will see a detailed, color‑coded report of your Android device.
 
 ---
 
-## 🔥 Quick One‑Liner (if you already have Termux & git)
-
+## 🔥 Quick One‑Liner
+If you already have Git and Python installed:
 ```bash
-git clone https://github.com/YOUR_USERNAME/droidinfo-advanced && cd droidinfo-advanced && bash install.sh && droidinfo
+git clone [https://github.com/charlietech255/androscan](https://github.com/charlietech255/androscan) && cd androscan && bash install.sh && androscan
 ```
 
 ---
@@ -94,46 +82,25 @@ git clone https://github.com/YOUR_USERNAME/droidinfo-advanced && cd droidinfo-ad
 ## 🔧 Optional Features (For Even More Data)
 
 ### Install Termux:API for sensor access
-
 ```bash
 pkg install termux-api
 ```
+*Go to **Android Settings** → **Apps** → **Termux** → **Permissions** and ensure **Sensors** is enabled.*
 
-After installation, you may need to grant **sensor permission** in:
-- **Android Settings** → **Apps** → **Termux** → **Permissions** → Enable **Sensors**.
-
-### Re‑run the storage permission (if `/sdcard` is not showing)
-
+### Update Androscan to the latest version
 ```bash
-termux-setup-storage
-```
-
-### Update DroidInfo to the latest version
-
-```bash
-cd ~/droidinfo-advanced
+cd ~/androscan
 git pull
 bash install.sh
 ```
 
 ---
 
-## 🗑️ Uninstall
-
-To completely remove DroidInfo:
-
-```bash
-rm $PREFIX/bin/droidinfo
-rm -rf ~/droidinfo-advanced
-```
-
----
-
 ## 📊 Example Output
 
-```
+```text
 ═══════════════════════════════════════════════════════════
-           ADVANCED ANDROID SYSTEM ANALYZER
+                ANDROSCAN: SYSTEM ANALYZER
 ═══════════════════════════════════════════════════════════
 
 📱 DEVICE INFORMATION
@@ -164,14 +131,10 @@ rm -rf ~/droidinfo-advanced
    Uptime       : 2d 14h 23m
    CPU Temp     : 45.2°C (113.4°F)
    Thermal Throttle: No
-   Load Average : ['1.52', '1.28', '1.05']
 
 🔋 BATTERY HEALTH
    Level      : 78%
    Temperature: 36.5°C (97.7°F)
-   Voltage    : 4350 mV
-   Health     : Good
-   Technology : Li-poly
    Status     : Discharging
 
 🌐 NETWORK
@@ -182,24 +145,15 @@ rm -rf ~/droidinfo-advanced
 📦 INSTALLED APPS
    User apps   : 127
    System apps : 214
-   Top user apps:
-      - com.whatsapp
-      - com.instagram.android
-      - com.twitter.android
-      - com.reddit.frontpage
-      - com.spotify.music
 
 🔄 BACKGROUND PROCESSES (top CPU/RAM)
    12.5% CPU | 8.2% MEM → com.android.chrome
    8.1% CPU  | 4.5% MEM → com.whatsapp
-   5.2% CPU  | 2.1% MEM → termux
 
 📡 SENSORS DETECTED
-   - accel
-   - gyro
-   - light
+   - accelerometer
+   - gyroscope
    - proximity
-   - magnetometer
 
 ═══════════════════════════════════════════════════════════
 Tip: Install Termux:API (pkg install termux-api) for more sensor data.
@@ -209,62 +163,33 @@ Tip: Install Termux:API (pkg install termux-api) for more sensor data.
 
 ## ❓ Troubleshooting
 
-### ❌ `bash: droidinfo: command not found`
-- Ensure you ran `bash install.sh` successfully.
-- Check that `$PREFIX/bin` is in your PATH (default in Termux).
-
-### ❌ `Permission denied` when running `droidinfo`
-- Run `chmod +x $PREFIX/bin/droidinfo` once.
-
-### ❌ Storage info shows "Not mounted"
-- Run `termux-setup-storage` again and grant permission.
-
-### ❌ No Wi‑Fi SSID / IP address
-- Your device must be connected to Wi‑Fi.
-- Some Android versions restrict `dumpsys`; you may see `Unknown`. This is normal.
-
-### ❌ Sensors not showing
-- Install `pkg install termux-api` and grant sensor permission in Android settings.
-
-### ❌ The script runs slowly the first time
-- That’s because it calls `pm list packages` and `top` – subsequent runs will be faster due to caching.
-
-### ❌ I see "mock data" / "Unknown"
-- The script uses real kernel interfaces (`/proc`, `/sys`, `getprop`). If something is `Unknown`, your device either doesn’t expose that information or Termux lacks permission. **RAM, CPU cores, storage, and battery are always real.**
-
-### ❌ Error: `termux-sensor: command not found`
-- Install Termux:API: `pkg install termux-api`. Then close and reopen Termux.
+- **`command not found: androscan`**: Ensure the installer ran without errors. You might need to restart Termux.
+- **Permission Denied**: Run `chmod +x $PREFIX/bin/androscan`.
+- **Inaccurate Storage**: Ensure you ran `termux-setup-storage`.
+- **SSID "Unknown"**: Modern Android versions require Location permissions to be granted to Termux to see the SSID.
 
 ---
 
-## 📝 How to Contribute
+## 🗑️ Uninstall
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/amazing-feature`).
-3. Make your changes.
-4. Commit (`git commit -m 'Add some amazing feature'`).
-5. Push (`git push origin feature/amazing-feature`).
-6. Open a Pull Request.
-
----
-
-
-## 🙏 Acknowledgements
-
-- [Termux](https://termux.com/) – amazing terminal emulator for Android.
-- Android `/proc` and `/sys` filesystem documentation.
-- All open‑source contributors.
-
----
-
-## 📬 Contact
-
-Project Link: [https://github.com/YOUR_USERNAME/droidinfo-advanced](https://github.com/YOUR_USERNAME/droidinfo-advanced)
-
----
-
-**Enjoy monitoring your Android device!**  
-If you like this tool, please ⭐ star the repository and share it with friends.
+To remove Androscan from your system:
+```bash
+rm $PREFIX/bin/androscan
+rm -rf ~/androscan
 ```
 
-This README is **comprehensive** – it includes a table of contents, step‑by‑step installation, optional features, uninstall instructions, a full example output, troubleshooting, and contribution guidelines. Replace `YOUR_USERNAME` with your actual GitHub username before publishing.
+---
+
+## 📝 Contribution & Support
+
+1. Fork the repo.
+2. Create your feature branch.
+3. Commit changes.
+4. Push to the branch.
+5. Open a Pull Request.
+
+**Project Link:** [https://github.com/charlietech255/androscan](https://github.com/charlietech255/androscan)
+
+---
+**Developed by CharlieTech.** If you find this tool useful, please give it a ⭐ on GitHub!
+```
